@@ -46,7 +46,7 @@ public class IPensionService {
 			return empOpt.get();
 		} else {
 			LOG.info("pension details is NOT available.");
-			throw new PensionDetailsNotFoundException(pensionerId + " this employee is not found.");
+			throw new PensionDetailsNotFoundException(pensionerId + " this pension details  not found.");
 		}
 	}
 	public PensionDetails deletePensionDetails(int pensionerId) {
@@ -56,7 +56,7 @@ public class IPensionService {
 			pensionRepository.deleteById(pensionerId);
 			return empOpt.get();
 		} else {
-			throw new PensionDetailsNotFoundException(pensionerId + " this employee does not exist.");
+			throw new PensionDetailsNotFoundException(pensionerId + " this pension details does not exist.");
 		}
 	}
 }
